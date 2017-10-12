@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>PSU - Proyecto de Solicitudes UTEQ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="author" content="KevinCris"/>
+        <!-- Estilos CSS -->
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <h:outputStylesheet name="css/neon-theme.css"/>
+        <h:outputStylesheet name="css/entypo.css"/>
+        <h:outputStylesheet name="css/green.css"/>
+        <h:outputStylesheet name="bootstrap-3.3.7/css/bootstrap.css"/>
+        <h:outputStylesheet name="bootstrap-3.3.7/css/bootstrap.min.css"/>
+        
+    </h:head>
+    <h:body class="page-body login-page login-form-fall">
+        <div class="login-container">
+            <div class="login-header login-caret">
+                <div class="login-content">
+                    <a href="index.xhtml" class="logo"><img src="resources/image/logo@2x2.png" alt="UTEQ" width="120"/></a>
+                        <p class="description">Por favor identifíquese para acceder al sistema!</p>
+		</div>
+            </div>
+        </div>
+        <h:form>
+            <div class="login-form"></div>
+                <div class="login-content">
+                    <p:messages id="mensaje" showDetail="true" autoUpdate="true" /> 
+                        <div class="form-group">						
+                            <div class="input-group">
+                                 <span class="input-group-addon" ><i class="fa fa-user"></i></span>
+                                 <h:inputText styleClass="form-control btn btn-primary btn-block btn-login" />
+                            </div>
+                        </div>
+                        <div class="form-group" >						
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                <h:inputSecret styleClass="form-control btn btn-primary btn-block btn-login"/>
+                            </div>					
+                        </div>
+                    <div class="form-group">
+                        <h:link styleClass="btn btn-primary btn-block btn-login" outcome="/persona/personas/List" value="Ingresar" 
+                                onclick="alert('Acceder al Web Service')" />
+                    </div>
+                </div>
+             
+        </h:form>
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" style="color: #000;"/>
+        <br />
+        <h:link outcome="/persona/personas/List" value="Show All Personas Items" style="color: #000;"/>
+        
+    </h:body>
+
+</html>
+
